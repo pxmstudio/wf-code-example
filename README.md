@@ -33,7 +33,7 @@ Add the following script to your Webflow project settings before the closing `</
       'http://localhost:5173/@vite/client',
       'http://localhost:5173/src/main.ts',
     ]
-    const PROD_URL = ['https://video-wf-structure.pages.dev/main.js']
+    const PROD_URL = ['https://video-wf-structure.pages.dev/main.js'] // replace this with your production url
 
     function createScripts(arr, isDevMode) {
       return arr.map(function (url) {
