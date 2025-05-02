@@ -1,9 +1,8 @@
 import { Hono } from 'hono'
-import { cors } from 'hono/cors'
+import { cors } from 'hono/cors';
 
 type Bindings = {
-  NOT_SO_SECRET_VAR: string;
-  API_SECRET_KEY: string;
+  SECRET_KEY: string;
 }
 
 const app = new Hono<{ Bindings: Bindings }>()
@@ -23,6 +22,10 @@ app.use("*", cors({
 }))
 
 app.get('/', (c) => {
+  const secretKey = c.env.SECRET_KEY;
+
+  console.log("secretKey", secretKey);
+
   const randomNumber = Math.floor(Math.random() * 100);
 
   return c.text(randomNumber.toString());

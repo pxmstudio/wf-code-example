@@ -1,19 +1,20 @@
-class Hello extends HTMLElement {
+class PxRandNumber extends HTMLElement {
     constructor() {
         super();
     }
 
     connectedCallback() {
-        this.getHonoMessage().then((message) => {
-            this.textContent = message;
+        this.getRandomNumber().then((number) => {
+            this.innerHTML = number;
         });
     }
 
-    async getHonoMessage() {
+    async getRandomNumber() {
         const response = await fetch(`${import.meta.env.VITE_API_URL}`);
         const data = await response.text();
+
         return data;
     }
 }
 
-customElements.define("px-hello", Hello);
+customElements.define("px-rand-number", PxRandNumber);
