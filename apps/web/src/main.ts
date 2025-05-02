@@ -1,8 +1,4 @@
-import middleware from "./utils/middleware";
-
 async function main() {
-  middleware();
-
   const helloEl = document.querySelector("px-hello");
 
   if (helloEl) {
