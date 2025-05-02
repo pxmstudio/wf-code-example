@@ -1,19 +1,24 @@
 import middleware from "./utils/middleware";
 
-window.Webflow ||= [];
-
 async function main() {
   middleware();
-
-  console.log("hello world");
 
   const helloEl = document.querySelector("px-hello");
 
   if (helloEl) {
     await import("./components/hello");
   }
+
+  const randTextEl = document.querySelector("px-rand-text");
+
+  if (randTextEl) {
+    await import("./components/rand-text");
+  }
 }
 
-window.Webflow.push(main);
-
-
+if (!window.Webflow?._) {
+  main();
+} else {
+  window.Webflow ||= [];
+  window.Webflow.push(main);
+}
