@@ -1,8 +1,8 @@
 async function main() {
-  const helloEl = document.querySelector("px-hello");
+  const randNumberEl = document.querySelector("px-rand-number");
 
-  if (helloEl) {
-    await import("./components/hello");
+  if (randNumberEl) {
+    await import("./components/rand-number");
   }
 
   const randTextEl = document.querySelector("px-rand-text");
