@@ -10,6 +10,12 @@ async function main() {
   if (randTextEl) {
     await import("./components/rand-text");
   }
+
+  const globalVarEl = document.querySelector("[data-global-var]");
+
+  if (globalVarEl) {
+    globalVarEl.innerHTML = import.meta.env.VITE_GLOBAL_VAR;
+  }
 }
 
 if (!window.Webflow?._) {
