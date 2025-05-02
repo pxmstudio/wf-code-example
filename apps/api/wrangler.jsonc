@@ -1,14 +1,14 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "super-complex-logic-api",
+  "name": "video-yt-structure-api",
   "main": "src/index.ts",
-  "compatibility_date": "2025-05-02",
-  "vars": {
-    "NOT_SO_SECRET_VAR": "not-so-secret-var"
-  },
+  "compatibility_date": "2025-05-02"
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
+  // "vars": {
+  //   "MY_VAR": "my-variable"
+  // },
   // "kv_namespaces": [
   //   {
   //     "binding": "MY_KV_NAMESPACE",
