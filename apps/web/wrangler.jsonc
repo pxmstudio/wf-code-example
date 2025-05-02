@@ -1,0 +1,8 @@
+{
+  "name": "super-complex-logic",
+  "compatibility_date": "2025-05-02",
+  "main": "src/main.ts",
+  "assets": {
+    "directory": "./dist"
+  },
+}
